@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <style>
+        body{
+            background-image: url("{% static 'images/learn.png' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+    } 
+    </style>
+
+    <br><br>
+    <div class='divlogindiv'>
+    <div class="logindiv">
+        <h2>Login to hitCompanion</h2>
+        <hr>
+        <form action="">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <center>
+            <input type="submit" value="login" class='btn btn-warning btn-lg' ><br><br>
+            <a href="https://www.hit.ac.zw">Visit the institute website</a>
+            </center>
+        </form>
+    </div>
+    </div>
+
+   <div class="blinkText" id='blink'>
+       Welcome to hitCompanion!!!
+   </div>
+
+    <script>
+        window.setInterval(
+            ()=>{
+                let text = document.getElementById('blink')
+                if(text.style.visibility == 'hidden'){
+                    text.style.visibility = 'visible'
+                }else{
+                    text.style.visibility = 'hidden'
+                }
+            },600
+        );
+        
+    </script>
+
+{% endblock %}

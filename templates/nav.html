@@ -1,0 +1,25 @@
+{% load static %}
+<header>
+    <nav>
+        <a href="/">HITCOMPANION</a>
+        <a href="{% url 'accounts:login' %}">Login</a>
+        <a href="">Logout</a>
+        <a href="">About</a>
+        
+    </nav>
+</header>
+
+<style>
+    nav a{
+        
+        padding-right: 5px;
+        color:black;
+        display: inline-block;
+    }
+
+    nav a:hover{
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+</style>

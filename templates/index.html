@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <div class="jumbotron headjumbo">
+        <img src="{% static 'images/hit.png' %}" style="float:left;height:50px;width:120px;" alt="">
+        <h1>Welcome to hitCompanion</h1>
+    </div>
+
+    <button class='btn btn-primary'>
+        <a href="{% url 'collaborate:askQuestion' %}" style="color:white;">Ask question</a>
+    </button>
+    <center>  <h2>Other asked questions... </h2><hr><small>
+        Click question title to provide an answer 
+    </small> </center> 
+
+    {% for question in questions %}
+    <h3> <a href="/comment/{{ question.questionid }}"> {{ question.questionTitle }} </a> </h3>
+    <h5>{{ question.questionText }} </h5><br> 
+    <em> question asked : {{ question.timestamp|timesince }} ago </em> <hr>
+    
+    {% endfor %} <br>
+
+    <button class='btn btn-primary'>
+        <a href="{% url 'collaborate:askQuestion' %}" style="color:white;">Ask question</a>
+    </button>
+</div>
+
+{% endblock %}

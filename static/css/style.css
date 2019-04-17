@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    background-color: #D6E4FF;
+}
+
+.headjumbo{
+    color: white;
+    background-color: rgb(49, 115, 212);
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.logindiv{
+    border: 1px solid rgb(0, 0, 0);
+    width: 350px;
+    height: 420px;
+    border-top: none;
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+    /* opacity: .6; */
+    
+}
+.logindiv a{
+    color: black;
+}
+
+#blink {
+    text-align: center;
+    padding-top: 40px;
+    color: black;
+    font-size: 20px;
+    opacity: .8;
+    
+}
+
+.divlogindiv{
+    padding-left: 200px;
+}
+
+.blinkText{
+    padding-left: 250px;
+    padding-top: 20px;
+    text-align: center;
+    display: inline-block;
+}

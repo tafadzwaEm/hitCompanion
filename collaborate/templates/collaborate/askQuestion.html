@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+{% block title %}Ask Your Question{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <div class="jumbotron headjumbo">
+        <img src="{% static 'images/hit.png' %}" style="float:left;height:50px;width:120px;" alt="">
+        <h1>Ask Your Question here</h1>
+    </div>
+
+    <div style="height:700px;width:550px;">
+        <div class="container ">
+            <form action="/saveQuestion/" method="POST">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="submit" value='ASK'>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
