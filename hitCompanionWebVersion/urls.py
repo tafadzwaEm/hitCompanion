@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^$',HomePage,name='home'),
     url(r'',include('accounts.urls')),
     url(r'',include('collaborate.urls')),
+    url(r'^about',AboutPage.as_view(),name='about')
 ]

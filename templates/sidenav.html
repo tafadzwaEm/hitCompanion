@@ -1,0 +1,92 @@
+<div class="sidenav-container">
+    <div class="sidenav-wrapper">
+        <div class="list-wrapper">
+            <ul id="sidenav-list">
+                <li> <a href="{% url 'collaborate:contact' %}">Contact us</a></li>
+                <li><a href="http://www.hit.ac.zw/">Hit Website</a></li>
+                <li><a href="{% url 'collaborate:feedback' %}">Feedback</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toggle-btn" onclick="toggle()">
+        <div id="span"> </div> <br>
+        <div id="span"> </div> <br>
+        <div id="span"> </div> <br>
+    </div>
+</div>
+
+<style>
+    .sidenav-container {
+        margin-top: 100px;
+        display: inline-block;
+        float: left;
+    }
+    
+    .sidenav-wrapper {
+        width: 200px;
+        height: 250px;
+        float: left;
+        background: rgb(49, 115, 212);
+        left: 0px !important;
+        position: fixed;
+        transition: all 500ms linear;
+    }
+    
+    .sidenav-wrapper.active {
+        left: -200px !important;
+    }
+    
+    .toggle-btn.active {
+        left: 0px !important;
+    }
+    
+    .list-wrapper {
+        padding-top: 20px;
+    }
+    
+    #sidenav-list {
+        list-style: none;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    
+    #sidenav-list a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+    }
+    
+    #sidenav-list a:hover {
+        color: yellow;
+        font-size: 25px;
+    }
+    
+    #sidenav-list li {
+        margin-top: 20px;
+    }
+    
+    .toggle-btn {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        left: 5px;
+        position: relative;
+        cursor: pointer;
+        left: 205px !important;
+        transition: all 500ms linear;
+    }
+    
+    #span {
+        border: 1px solid rgb(49, 115, 212);
+        margin-bottom: -10px;
+    }
+</style>
+
+<script>
+    let toggle = () => {
+        document.querySelector('.sidenav-wrapper').classList.toggle('active')
+        document.querySelector('.toggle-btn').classList.toggle('active')
+    }
+</script>

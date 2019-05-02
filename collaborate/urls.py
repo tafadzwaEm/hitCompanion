@@ -9,4 +9,7 @@ urlpatterns = [
     url('saveQuestion/',SaveQuestion),
     path('comment/<int:id>/',AnswerQuestionPage),
     path('saveAnswer/<int:id>/',SaveAnswer),
+    url('like/',like_post,name='like_post'),
+    url('feedback/',FeedbackPage.as_view(),name="feedback"),
+    url('contact/',ContactPage.as_view(),name="contact")
 ]

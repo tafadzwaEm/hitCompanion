@@ -21,4 +21,8 @@ class QuestionAnswerForm(forms.ModelForm):
             super().__init__(*args,**kwargs)
             self.fields['questionid'].Label = ''
     
-   
+class FeedbackForm(forms.ModelForm):
+
+    class Meta:
+        model = Feedback
+        fields = "__all__" 

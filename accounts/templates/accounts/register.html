@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url("{% static 'images/learn.png' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<br><br>
+<div class='divregisterdiv'>
+    <div class="registerdiv">
+        <h2>Register to hitCompanion</h2>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <center>
+                <input type="submit" value="register" class='btn btn-warning btn-lg'><br><br>
+                <a href="https://www.hit.ac.zw">Visit the institute website</a>
+            </center>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,25 +1,41 @@
-{% load static %}
+{% load static %} {% if user.is_authenticated %}
 <header>
-    <nav>
-        <a href="/">HITCOMPANION</a>
-        <a href="{% url 'accounts:login' %}">Login</a>
-        <a href="">Logout</a>
-        <a href="">About</a>
-        
+    <nav style="background-color:black;color:white;line-height: 40px;opacity: .5;">
+        <a href="/">HITCOMPANION</a> |
+        <a href="/admin/">Administration</a> |
+        <a href="{% url 'about' %}">About</a> |
+        <a href="{% url 'accounts:logout' %}">Logout</a>
+
+    </nav>
+</header>
+{% else %}
+
+<header>
+    <nav style="background-color:black;color:white;line-height: 40px;opacity: .5;">
+        <a href="/">HITCOMPANION</a> |
+        <a href="{% url 'accounts:login' %}">Login</a> |
+        <a href="{% url 'accounts:register' %}">Register</a> |
+        <a href="{% url 'about' %}">About</a>
+
+
     </nav>
 </header>
 
+
+{% endif %}
+
+
+
+
 <style>
-    nav a{
-        
+    nav a {
         padding-right: 5px;
-        color:black;
+        color: white;
         display: inline-block;
     }
-
-    nav a:hover{
+    
+    nav a:hover {
         text-decoration: none;
         font-size: 25px;
     }
-
 </style>

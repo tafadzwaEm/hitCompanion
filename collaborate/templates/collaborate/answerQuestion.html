@@ -3,7 +3,11 @@
 {% load static %}
 {% block title %}Answer{% endblock %}
 
+
+
 {% block content %}
+
+{% if user.is_authenticated %}
 
 <div class="container">
 
@@ -12,17 +16,21 @@
         <h1>Provide answer below</h1>
     </div>
 
-    <h3>
-        Question: {{ qns.questionText }} <hr>
-    </h3>
+    <h3> Question: {{ qns.questionText }} <hr> </h3>
+
         <h4>Other Comments </h4> 
-        {% for an in ans %}
+
+            {% for an in ans %}
         <ul>
-        <li>{{ an.answerText }} <br>
-            <small style='color: blue;'>
-        {{ an.timestamp|timesince }} ago 
-            </small>
-        </li>
+            <li>{{ an.answerText }} <br>
+                <small style='color: blue;'>
+                    {{ an.timestamp|timesince }} ago 
+                </small> 
+                <form action="{% url 'collaborate:like_post' %}"method='POST'>
+                    {% csrf_token %}
+                    <button type="submit" name='answerid' value='{{ an.answerid }}'class='btn btn-primary '>Like</button> {{ total_likes }}
+                </form>
+            </li>
         
         </ul>
         {% endfor %}
@@ -40,6 +48,9 @@
     </div>
 
 </div>
+{% else %}
+You cannot participate if you are not logged in
+{% endif %}
 
 
 {% endblock %}

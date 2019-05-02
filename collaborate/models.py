@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 class AskQuestion(models.Model):
     questionid = models.AutoField(primary_key=True)
@@ -11,6 +13,16 @@ class AskQuestion(models.Model):
 
 class QuestionAnswer(models.Model):
     questionid = models.ForeignKey(AskQuestion,on_delete=models.CASCADE)
+    
     answerid =  models.AutoField(primary_key=True)
     answerText = models.TextField()
     timestamp = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.answerText
+
+class Feedback(models.Model):
+    feedback = models.TextField()
+
+    def __str__(self):
+        return self.feedback

@@ -4,6 +4,8 @@
 {% block title %}Ask Your Question{% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
+
 <div class="container">
 
     <div class="jumbotron headjumbo">
@@ -22,6 +24,10 @@
     </div>
 
 </div>
+
+{% else %}
+You cannot participate if you are not logged in
+{% endif %}
 
 
 {% endblock %}

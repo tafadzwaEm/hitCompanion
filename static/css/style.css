@@ -1,17 +1,16 @@
-body{
+body {
     margin: 0;
     background-color: #D6E4FF;
 }
 
-.headjumbo{
+.headjumbo {
     color: white;
     background-color: rgb(49, 115, 212);
     text-align: center;
     padding: 20px;
-    
 }
 
-.logindiv{
+.logindiv {
     border: 1px solid rgb(0, 0, 0);
     width: 350px;
     height: 420px;
@@ -20,9 +19,9 @@ body{
     border-radius: 20px;
     color: black;
     /* opacity: .6; */
-    
 }
-.logindiv a{
+
+.logindiv a {
     color: black;
 }
 
@@ -32,16 +31,51 @@ body{
     color: black;
     font-size: 20px;
     opacity: .8;
-    
 }
 
-.divlogindiv{
+.divlogindiv {
     padding-left: 200px;
 }
 
-.blinkText{
+.blinkText {
     padding-left: 250px;
     padding-top: 20px;
     text-align: center;
     display: inline-block;
+}
+
+.registerdiv {
+    border: 1px solid rgb(0, 0, 0);
+    width: 700px;
+    height: 650px;
+    border-top: none;
+    border-bottom: none;
+    padding: 20px;
+    color: black;
+    /* opacity: .6; */
+}
+
+.registerdiv a {
+    color: black;
+}
+
+.divregisterdiv {
+    padding-left: 100px;
+}
+
+.row .card-panel img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.card-panel {
+    width: 400px;
+    background: linear-gradient(#D6E4FF, rgb(49, 115, 212));
+    text-align: center;
+    color: black;
+    border-radius: 20px;
+    margin-right: 50px;
+    margin-left: 100px;
+    margin-top: 50px;
 }
