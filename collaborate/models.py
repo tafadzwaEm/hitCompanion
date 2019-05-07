@@ -23,6 +23,7 @@ class QuestionAnswer(models.Model):
 
 class Feedback(models.Model):
     feedback = models.TextField()
+    timestamp = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.feedback

@@ -1,19 +1,21 @@
-<div class="sidenav-container">
-    <div class="sidenav-wrapper">
-        <div class="list-wrapper">
-            <ul id="sidenav-list">
-                <li> <a href="{% url 'collaborate:contact' %}">Contact us</a></li>
-                <li><a href="http://www.hit.ac.zw/">Hit Website</a></li>
-                <li><a href="{% url 'collaborate:feedback' %}">Feedback</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-            </ul>
+<div class="container">
+    <div class="sidenav-container">
+        <div class="sidenav-wrapper">
+            <div class="list-wrapper">
+                <ul id="sidenav-list">
+                    <li> <a href="{% url 'collaborate:contact' %}">Contact us</a></li>
+                    <li><a href="http://www.hit.ac.zw/">Hit Website</a></li>
+                    <li><a href="{% url 'collaborate:feedback' %}">Feedback</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div class="toggle-btn" onclick="toggle()">
-        <div id="span"> </div> <br>
-        <div id="span"> </div> <br>
-        <div id="span"> </div> <br>
+        <div class="toggle-btn" onclick="toggle()">
+            <div id="span"> </div> <br>
+            <div id="span"> </div> <br>
+            <div id="span"> </div> <br>
+        </div>
     </div>
 </div>
 
@@ -71,7 +73,7 @@
         width: 30px;
         height: 30px;
         display: inline-block;
-        left: 5px;
+        left: -5px;
         position: relative;
         cursor: pointer;
         left: 205px !important;
